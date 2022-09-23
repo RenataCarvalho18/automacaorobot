@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220923 11:47:51.285" rpa="false" schemaversion="3">
+<suite id="s1" name="Amazon Testes" source="C:\Users\renata.carvalho\Automacao_Amazon\WebTesting2\amazon_testes.robot">
+<test id="s1-t1" name="Tela de login Amazon" line="9">
+<kw name="abrir navegador" library="amazon_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220923 11:47:52.734" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220923 11:47:52.733" endtime="20220923 11:47:58.315"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220923 11:47:58.315" endtime="20220923 11:47:58.457"/>
+</kw>
+<status status="PASS" starttime="20220923 11:47:52.733" endtime="20220923 11:47:58.457"/>
+</kw>
+<kw name="Dado que o usuario esteja no site amazon.com.br" library="amazon_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220923 11:47:58.460" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
+<status status="PASS" starttime="20220923 11:47:58.459" endtime="20220923 11:48:02.447"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${MENU_VENDAS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220923 11:48:02.448" endtime="20220923 11:48:02.531"/>
+</kw>
+<status status="PASS" starttime="20220923 11:47:58.458" endtime="20220923 11:48:02.532"/>
+</kw>
+<kw name="Quando o usuario clicar no botão Olá, faça seu login" library="amazon_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=${BOTAO_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 11:48:02.535" level="INFO">Clicking element '//span[@class='nav-line-1 nav-progressive-content'][contains(.,'Olá, faça seu login')]'.</msg>
+<status status="PASS" starttime="20220923 11:48:02.533" endtime="20220923 11:48:03.013"/>
+</kw>
+<status status="PASS" starttime="20220923 11:48:02.532" endtime="20220923 11:48:03.013"/>
+</kw>
+<kw name="E for redirecionado para a página Fazer Login" library="amazon_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${TEXTO_LOGIN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220923 11:48:03.015" endtime="20220923 11:48:03.486"/>
+</kw>
+<status status="PASS" starttime="20220923 11:48:03.014" endtime="20220923 11:48:03.487"/>
+</kw>
+<kw name="E ao inserir um email valido" library="amazon_resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=${TEXTO_LOGIN}</arg>
+<arg>text=testeqa20222@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220923 11:48:03.491" level="INFO">Typing text 'testeqa20222@gmail.com' into text field '//input[@type='email'][contains(@id,'email')]'.</msg>
+<status status="PASS" starttime="20220923 11:48:03.490" endtime="20220923 11:48:03.838"/>
+</kw>
+<status status="PASS" starttime="20220923 11:48:03.490" endtime="20220923 11:48:03.838"/>
+</kw>
+<kw name="E clicar no botão Continuar" library="amazon_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=continue</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 11:48:03.840" level="INFO">Clicking element 'continue'.</msg>
+<status status="PASS" starttime="20220923 11:48:03.839" endtime="20220923 11:48:05.053"/>
+</kw>
+<status status="PASS" starttime="20220923 11:48:03.839" endtime="20220923 11:48:05.054"/>
+</kw>
+<kw name="E ao inserir uma senha valida" library="amazon_resources">
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>locator=ap_password</arg>
+<arg>password=teste2022</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220923 11:48:05.057" level="INFO">Typing password into text field 'ap_password'.</msg>
+<msg timestamp="20220923 11:48:05.130" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220923 11:48:05.204" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220923 11:48:05.056" endtime="20220923 11:48:05.204"/>
+</kw>
+<status status="PASS" starttime="20220923 11:48:05.055" endtime="20220923 11:48:05.205"/>
+</kw>
+<kw name="E clicar no botão Fazer login" library="amazon_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=signInSubmit</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220923 11:48:05.208" level="INFO">Clicking element 'signInSubmit'.</msg>
+<status status="PASS" starttime="20220923 11:48:05.207" endtime="20220923 11:48:05.389"/>
+</kw>
+<status status="PASS" starttime="20220923 11:48:05.206" endtime="20220923 11:48:05.390"/>
+</kw>
+<kw name="Então o usuario deverá ser redirecionado para a página home com o login efetuado" library="amazon_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${CONFIRMACAO_HOMEPAGE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220923 11:48:05.396" endtime="20220923 11:48:09.353"/>
+</kw>
+<status status="PASS" starttime="20220923 11:48:05.395" endtime="20220923 11:48:09.354"/>
+</kw>
+<status status="PASS" starttime="20220923 11:47:52.732" endtime="20220923 11:48:09.355"/>
+</test>
+<status status="PASS" starttime="20220923 11:47:51.292" endtime="20220923 11:48:09.358"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Amazon Testes">Amazon Testes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
