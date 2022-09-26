@@ -1,5 +1,7 @@
 jobs: 
 
+ 
+
 - job: 'test'
 
   pool: 
@@ -22,7 +24,7 @@ jobs:
 
   - task: UsePythonVersion@0
 
-
+ 
 
     inputs: 
 
